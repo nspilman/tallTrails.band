@@ -31,7 +31,7 @@ body{
     justify-content: center;
     width:100vw;
     height:100vh;
-    color:#EDECDA;
+    color:white;
     animation-name: changeSize;
     animation-duration: 4s;
     animation-iteration-count: infinite;
