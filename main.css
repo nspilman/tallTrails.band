@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Gordita;
+    src: url("./fonts/Gordita\ Medium\ Italic.otf") format("opentype");
+}
+
 #image-container{
     display:flex;
     justify-content: center;
@@ -9,31 +14,66 @@
     max-height:100vh;
 }
 
-body{
-    background-color:#E3DDC6;
-}
-
-@keyframes changeSize {
-    0%   {font-size: 3em;}
-    10%   {font-size: 7em;}
-    25%  {font-size: 5em;}
-    33%  {font-size: 9em;}
-    50%  {font-size: 8em;}
-    66%  {font-size: 2em;}
-    75%  {font-size: 6em;}
-    100% {font-size: 3em;}
-}
-
-#nowAvailable{
-    position: absolute;
+#listen-links-sidebar{
     display:flex;
+    flex-direction: column;
+    height:100%;
     align-items: center;
     justify-content: center;
-    width:100vw;
-    height:100vh;
-    color:white;
-    animation-name: changeSize;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    text-shadow: .2em .2em black; 
+    width:30vw;
 }
+
+body{
+    background-color:#17273E;
+    font-family: Gordita;
+}
+
+.streaming-logo{
+    width:20vw;
+    height:auto;
+    padding:1em;
+    border-radius: 1em;
+    transition:500ms;
+}
+
+.streaming-logo:hover{
+    background-color:#6E5454;
+}
+
+#streaming-logos{
+    background-color:#D2D6C7;
+    display:flex;
+    flex-direction: column;
+    border-radius: 1em;
+    align-items: center;
+    justify-content: center;
+    padding:2em;
+}
+
+@media only screen and (max-width: 600px) {
+    #image-container{
+        display:flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;   
+        height:100vh;
+    }
+    #streaming-logos{
+        flex-direction: row;
+        border-radius: 1em;
+        flex-wrap: wrap;
+        width:90vw;
+    }
+
+    .streaming-logo{
+        width:20vw;
+        height:auto;
+        padding:1em;
+        border-radius: 1em;
+        transition:500ms;
+    }
+
+    #listenText{
+        display:none;
+    }
+  }
